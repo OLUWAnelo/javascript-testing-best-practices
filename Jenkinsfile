@@ -1,13 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Test') {
       steps {
-        sh '''bash 
-     #!/bin/bash 
+        sh '''  #!/bin/bash 
      set -e 
      npm install 
-     npm build'''
+     npm test '''
       }
     }
 

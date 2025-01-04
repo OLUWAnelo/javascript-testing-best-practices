@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Log') {
-      steps {
-        echo '"Starting JavaScript test pipeline..."'
+      parallel {
+        stage('Log') {
+          steps {
+            echo '"Starting JavaScript test pipeline..."'
+          }
+        }
+
+        stage('Log tool') {
+          steps {
+            echo 'echo "Running tests..."'
+          }
+        }
+
       }
     }
 

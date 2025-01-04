@@ -15,20 +15,12 @@ pipeline {
           }
         }
 
-        stage('Log tool') {
+        stage('Npm Test') {
           steps {
-            echo 'echo "Running tests..."'
+            sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
           }
         }
 
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh '''npm install
-npm test'''
-        sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
       }
     }
 

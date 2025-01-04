@@ -24,9 +24,10 @@ pipeline {
       }
     }
 
-    stage('Install tool') {
+    stage('Test') {
       steps {
-        sh 'npm install'
+        sh '''npm install
+npm test'''
       }
     }
 

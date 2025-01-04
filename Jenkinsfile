@@ -1,21 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Checkout') {
       steps {
-        echo 'Build'
-      }
-    }
-
-    stage('Test') {
-      steps {
-        echo 'Test'
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        echo 'Deploy'
+        git(url: 'https://github.com/OLUWAnelo/javascript-testing-best-practices', branch: 'Master')
       }
     }
 

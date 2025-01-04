@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('TEST') {
+    stage('Test') {
       steps {
-        sh 'mvnw test'
+        sh '''npm install
+npm test
+"test": "jest --coverage"'''
       }
     }
 

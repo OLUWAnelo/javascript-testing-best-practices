@@ -1,11 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('Test Code') {
       steps {
         sh '''npm install
-npm test
-"test": "jest --coverage"'''
+npm test'''
       }
     }
 

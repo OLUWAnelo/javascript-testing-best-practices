@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Build') {
       steps {
-        git(url: 'https://github.com/OLUWAnelo/javascript-testing-best-practices', branch: 'Master')
+        sh '''bash 
+     #!/bin/bash 
+     set -e 
+     npm install 
+     npm build'''
       }
     }
 

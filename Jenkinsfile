@@ -1,11 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('TEST') {
       steps {
-        sh '''npm init -y
-npm install --save-dev jest
-test-js.sh'''
+        sh 'test'
       }
     }
 

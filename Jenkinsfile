@@ -3,10 +3,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''  #!/bin/bash 
-     set -e 
-     npm install 
-     npm test '''
+        sh '''npm init -y
+npm install --save-dev jest
+test-js.sh'''
       }
     }
 

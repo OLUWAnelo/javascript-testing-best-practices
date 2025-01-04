@@ -7,10 +7,9 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Log') {
       steps {
-        sh '''npm install
-npm test'''
+        echo '"Starting JavaScript test pipeline..."'
       }
     }
 

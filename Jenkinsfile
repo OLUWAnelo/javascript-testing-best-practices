@@ -28,6 +28,7 @@ pipeline {
       steps {
         sh '''npm install
 npm test'''
+        sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
       }
     }
 

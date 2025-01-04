@@ -1,11 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('LOG TOOL VERSION') {
+    stage('CheckOut') {
       steps {
-        sh '''mvn --version 
-git --version 
-Java --version '''
+        git(url: 'https://github.com/OLUWAnelo/javascript-testing-best-practices', branch: 'Master')
       }
     }
 

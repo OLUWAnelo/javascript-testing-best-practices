@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'docker build -f javascript-testing-best-practices-front/Dockerfile .'
+      }
+    }
+
   }
 }

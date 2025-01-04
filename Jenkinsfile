@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Install tool') {
+      steps {
+        sh 'npm install'
+      }
+    }
+
   }
 }

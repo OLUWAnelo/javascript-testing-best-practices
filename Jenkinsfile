@@ -17,7 +17,7 @@ pipeline {
 
         stage('Npm Test') {
           steps {
-            sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
+            sh 'cd javascript-front && npm i && npm run test:unit'
           }
         }
 

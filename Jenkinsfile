@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('LOG TOOL VERSION') {
       steps {
-        echo 'Build'
+        sh '''mvn --version 
+git --version 
+Java --version '''
       }
     }
 

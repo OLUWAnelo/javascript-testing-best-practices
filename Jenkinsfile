@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Front-End Test') {
+      steps {
+        sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
+      }
+    }
+
   }
 }

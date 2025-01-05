@@ -13,15 +13,4 @@ pipeline {
       }
     }
 
-    stage('GIT LOGIN') {
-      environment {
-        GITHUB_USER = 'DevOps4321'
-        GITHUB_PASSWORD = 'OLUWAnelo'
-      }
-      steps {
-        sh 'git login -u $GITHUB_USER -p $GITHUB_PASSWORD '
-      }
-    }
-
-  }
-}
+    

@@ -7,28 +7,5 @@ pipeline {
       }
     }
 
-    stage('Log') {
-      parallel {
-        stage('Log') {
-          steps {
-            echo '"Starting JavaScript test pipeline..."'
-          }
-        }
-
-        stage('Npm Test') {
-          steps {
-            sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
-          }
-        }
-
-      }
-    }
-
-    stage('Build') {
-      steps {
-        sh 'docker build -f javascript-testing-best-practices-front/Dockerfile .'
-      }
-    }
-
   }
 }

@@ -13,9 +13,13 @@ pipeline {
       }
     }
 
-    stage('Front-End Test') {
+    stage('GIT LOGIN') {
+      environment {
+        GITHUB_USER = 'DevOps4321'
+        GITHUB_PASSWORD = 'OLUWAnelo'
+      }
       steps {
-        sh 'cd javascript-testing-best-practices-front && npm i && npm run test:unit'
+        sh 'git login -u $GITHUB_USER -p $GITHUB_PASSWORD '
       }
     }
 
